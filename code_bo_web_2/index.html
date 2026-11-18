@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="hero">
+        <div class="over-navbar">
+            <img src="image/logo.png" class="camera">
+            <div class="navbar-right">
+                <div class="btn">
+                    <button type="button" class="bnt-right">Explore</button>
+                </div>
+                <img src="image/user.png" class="user-pc">
+            </div>
+
+        </div>
+
+        <div class="about-page1">
+            <div class="text">
+                <h1 class="title">DESCOVER</h1>
+                <p class="prg">
+                    Lorem ipsum dolor sit amet consectetur 
+                    adipisicing elit. <br>Suscipit accusantium laborum!
+                </p>
+                <input type="text" class="search" placeholder="Search">
+                
+            </div>   
+        </div>
+        <div class="slide">
+            <img src="image/left-arrow.png" id="back">
+                <div class="all-pic">
+                    <img src="image/small1.png" class="active picb">
+                    <img src="image/small2.png" class="picb">
+                    <img src="image/small3.png" class="picb">
+                    <img src="image/small4.png" class="picb">
+                    <img src="image/small5.png" class="picb">
+                </div>
+            <img src="image/right-arrow.png" id="nextbtn">
+        </div>
+    </div>
+    <script>
+        var nextbtn = document.getElementById("nextbtn") ;
+        var back = document.getElementById("back") ;
+        var picb = document.getElementsByClassName("picb");
+
+        var hero = document.querySelector(".hero");
+
+        var backgroundImg = [
+            "image/bg1.png",
+            "image/bg2.png",
+            "image/bg3.png",
+            "image/bg4.png",
+            "image/bg5.png",
+        ];
+        let i = 0;
+        nextbtn.onclick =  function(){
+            if (i < backgroundImg.length -1){
+                picb[i+1].classList.add("active");
+                picb[i].classList.remove("active");
+                i++;
+                hero.style.backgroundImage = 'url("'+ backgroundImg[i] +'")';
+            }
+        };
+        back.onclick = function(){
+            if (i>0){
+                picb[i-1].classList.add("active");
+                picb[i].classList.remove("active");
+                i--;
+                hero.style.backgroundImage = 'url("'+ backgroundImg[i] +'")';
+            }
+        };
+    </script>
+</body>
+</html>

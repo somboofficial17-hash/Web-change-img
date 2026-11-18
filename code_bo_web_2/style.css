@@ -1,0 +1,118 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: 0;
+    font-family: sans-serif;
+}
+.hero{
+    width: 100%;
+    height: 100vh;
+    background-image: url('image/bg1.png');
+    background-position: center;
+    position: relative;
+    background-size: cover;
+}
+.hero .over-navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 40px;
+    
+}
+.hero .over-navbar .camera{
+    width: 80px;
+    margin-top: 10px;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.over-navbar .navbar-right{
+    display: flex;
+    gap: 50px;
+}
+.over-navbar .navbar-right .btn .bnt-right{
+    margin-top: 10px;
+    padding: 10px 40px;
+    font-size: 20px;
+    border: 1px solid white;
+    border-width: 3px;
+    border-top-left-radius:20px;
+    border-bottom-left-radius:20px;
+    border-bottom-right-radius:30px;
+    font-weight: 700;
+    color: white;
+    background: rgba(86, 86, 86, 0.5);
+    transition: 0.3s ease;
+    border-color: beige;
+    cursor: pointer;
+}
+.over-navbar .navbar-right .btn .bnt-right:hover{
+    background: none;
+}
+.over-navbar .navbar-right  .user-pc{
+    margin-top: 10px;
+    cursor: pointer;
+    width: 50px;
+}
+.hero .about-page1{
+    width: 50%;
+    height: 100vh;
+    background: rgba(86, 86, 86, 0.2);
+    backdrop-filter: blur(5px);
+    position:absolute;
+    left: 0;
+    top: 0;
+}
+
+.hero .about-page1 .text{
+color: white;
+
+}
+.hero .about-page1 .text{
+    margin-left: 70px;
+    margin-top: 250px;
+}
+.hero .about-page1 .text .title{
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+.hero .about-page1 .text  .prg{
+    font-size: 13px;
+    word-spacing: 5px;
+    line-height: 23px;
+}
+.hero .about-page1 .text  .search{
+    margin-top: 20px;
+    font-size: 16px;
+    border-radius: 20px;
+    padding: 10px 25px;
+    background: none;
+    border: 2px solid white;
+    color: white;
+}
+ .slide{
+    display: flex;
+    align-items: center;
+    position: absolute;
+    right: 30px;
+    bottom: 50px;
+}
+#back , #nextbtn{
+    width: 20px;
+    cursor: pointer;
+}
+.all-pic{
+    display: flex;
+    align-items: center;
+    margin: 0 60px;
+}
+.all-pic img{
+    width: 60px;
+    margin: 0 10px;
+    opacity: 0.4;
+}
+.slide .active{
+    width: 100px;
+    border: 2px solid white;
+    opacity: 1;
+}
